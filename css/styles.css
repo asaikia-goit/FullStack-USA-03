@@ -24,7 +24,8 @@
   /* create a flex column */
   display: flex;
   flex-direction: column;
-
+  justify-content: space-between;
+  background-color: #252628;
   background-image: url('/images/hero-background.png');
 }
 
@@ -68,7 +69,7 @@
 
 .nav-contact{
   display: flex;
-  width: 300px;
+  width: 330px;
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
@@ -87,4 +88,92 @@
   height: 40px;
   border: 1px solid #FF6C00;
   border-radius: 25px;
+}
+
+.header-text-container{
+  width: 100%;
+  height: 202px;
+  display: flex;
+  }
+
+.header-text{
+  flex-basis: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header-text > p:first-child {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.6);
+  margin: 0;
+}
+
+.header-text > h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 85px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.header-text > p:last-child{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  color: #9DA4BD;
+  margin: 0;
+}
+
+.hero-slider-container{
+  width: 100%;
+  height: 24px;
+
+  background-color: slateblue;
+
+}
+
+.hero-slider-tabs{
+  flex-basis: 20%;
+  border: 2px solid tomato;
+}
+
+.rect-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.rect-icon::before,
+.rect-icon::after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background-size: contain;
+}
+
+.rect-icon::before {
+  margin-right: 16px;
+  background: rgba(157, 164, 189, 0.6);
+}
+
+.about {
+  width: 100%;
+  height: 705px;
+  background-color: aliceblue;
+  padding: 130px 55px;
+}
+.about .content{
+  width: 100%;
+  height: 100%;
+  background: slateblue;
 }
