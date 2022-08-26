@@ -12,7 +12,39 @@
   width:155px;
   height: 100%;
   background: #fff;
-  border: 2px solid gray;
+  padding: 32px 32px 40px 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-socials-left-nav > .logo {
+  width: 69px;
+  height: 56px;
+}
+
+.logo-socials-left-nav > .socials {
+  width: 15px;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-socials-left-nav > .socials > p {
+  transform: rotate(270deg);
+
+}
+.logo-socials-left-nav > .socials > p:hover {
+  color: tomato;
+  cursor: pointer;
+}
+
+.logo-socials-left-nav > .socials > .line {
+  min-width: 4px;
+  height: 50px;
+  background: gray;
 }
 
 .hero-container{
@@ -209,11 +241,85 @@
 .about {
   width: 100%;
   height: 705px;
-  background-color: aliceblue;
   padding: 130px 55px;
 }
 .about .content{
   width: 100%;
   height: 100%;
-  background: slateblue;
+  display: flex;
+}
+
+.content .images {
+  width: 570px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .info {
+  width: calc(100% - 64px);
+  height: 100%;
+  margin-left: 64px;
+}
+
+.info > p:first-child {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #303030;
+  margin: 0px 0px 20px 0px;
+}
+
+.info > p:nth-child(2) {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  color: #555555;
+  margin: 0px 0px 20px 0px;
+}
+
+.info > p:nth-child(3) {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+  color: #555555;
+  margin: 0;
+}
+
+.info > h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 49px;
+  letter-spacing: 0.05em;
+  color: #303030;
+  margin: 0px 0px 20px 0px;
+}
+
+.info > .contact-us-btn{
+  color: #303030;
+  margin-top: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* test */
+
+.icon:hover {
+  fill: tomato;
 }
