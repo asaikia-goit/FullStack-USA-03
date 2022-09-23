@@ -546,3 +546,133 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+
+ /* contact form */
+ .contact-form {
+  width: 100%;
+  height: 644px;
+  background-color: #191C26; 
+  display: flex;
+  align-items: center;
+  
+}
+
+.contact-form h2 {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 49px;
+  letter-spacing: 0.05em;
+  margin: 0px 0px 44px 0px;
+  color: #FFFFFF;
+}
+
+ .contact-form > .book-service {
+  width: 50%;
+  height: 100%;
+  padding-left: 55px;
+  padding-right: 45px;
+  padding-bottom: 63px;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.book-service-form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book-service-form div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-service-form input {
+  background-color: #191C26; 
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  width: 255px;
+  height: 24px;
+  padding-bottom: 8px;
+  /* cursor: pointer; */
+}
+
+.book-service-form textarea {
+  background-color: #191C26; 
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  width: 100%;
+  padding-bottom: 8px;
+  resize: none;
+}
+
+.book-service-form input:focus,
+.book-service-form textarea {
+    outline: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.book-service-form input:focus::placeholder{
+    color: white;
+}
+
+.book-service-form > div {
+  margin-bottom: 44px
+}
+
+.book-service-form label {
+  color: rgba(157, 164, 189, 0.4);
+}
+
+.book-service-form label:focus-within {
+  color: white;
+}
+
+
+.book-service-form > .contact-us-btn {
+  display: flex;
+  justify-content: center;
+  color: white;
+  border-width: 2px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+}
+.book-service-form > .contact-us-btn:hover{
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+
+
+
+/* BEM */
+
+.contact-info{
+  width: 50%;
+  height: 100%;
+  background: url(/images/contacts-bg.png);
+  padding: 130px 100px;
+}
+
+.contact-info__header{
+  margin: 0px;
+  margin-bottom: 40px;
+}
+
+.contact-info__list{
+  list-style-type: none;
+}
+

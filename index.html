@@ -5,19 +5,15 @@
     <meta charset="UTF-8">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./sass/main.css" />
     <link href="/fonts/RubikBurned-Regular.ttf" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-        body {
-            /* font-family: 'Rubik Burned', cursive; */
-        }
-    </style>
 </head>
 
 <body>
 
-    <header class="page-header is-hidden">
+    <header class="page-header">
         <section class="logo-socials-left-nav">
             <svg class="logo">
                 <use href="#logo"></use>
@@ -66,12 +62,34 @@
                 <div>Back</div>
                 <div>Next</div>
             </div>
+            <div class="hamburger-icon">
+                <img src="./images/menu_40px.svg" alt="mobile menu icon" />
+            </div>
         </section>
 
     </header>
 
-    <main>
-        <section class="about is-hidden">
+    <!-- Mobile menu -->
+    <div class="mobile-nav-menu menu-container" id="mobile-menu">
+        <button class="menu-toggle close-menu">
+            <svg fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <path fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+            </svg>
+        </button>
+
+        <ul class="mobile-menu">
+            <li><a href="" class="link">About</a></li>
+            <li><a href="" class="link">Products</a></li>
+            <li><a href="" class="link">Contacts</a></li>
+            <li><a href="" class="link">Career</a></li>
+        </ul>
+    </div>
+
+    <main class="is-hidden">
+        <section class="about">
             <div class="content">
                 <div class="images">
                     <img src="/images/about_1.png" alt="barber working" />
@@ -95,7 +113,7 @@
             </div>
         </section>
 
-        <section class="services-and-prices">
+        <section class="services-and-prices ">
             <p>Spend time in the company of the best craftsmen</p>
             <h2>Services and Prices</h2>
             <div class="prices-cards">
@@ -149,7 +167,7 @@
             <div class="contact-us-btn">Book a service</div>
         </section>
 
-        <section class="why-us">
+        <section class="why-us ">
             <div class="reviews">
                 <div class="review">
                     <p class="count">600 <sup>+</sup></p>
@@ -172,7 +190,7 @@
             <div class="info"></div>
         </section>
 
-        <section class="barbers">
+        <section class="barbers ">
             <p class="rect-icon">for true connoisseurs of the atmosphere</p>
             <p>Our Barbers</p>
             <div class="bio">
@@ -271,12 +289,53 @@
 
         </section>
 
+        <section class="contact-form">
+            <div class="book-service">
+                <h2>BOOK A SERVICE</h2>
+                <form class="book-service-form" autocomplete="on" novalidate>
+                    <div>
+                        <input type="text" name="name" placeholder="Name*"
+                            required />
+                        <input type="tel" name="telephone"
+                            placeholder="Telephone*" required />
+                    </div>
+                    <label style="display:flex; flex-direction:column;">
+                        Feedback
+                        <textarea name="message" rows="5"></textarea>
+                    </label>
+
+                    <div class="contact-us-btn">Send</div>
+
+                </form>
+            </div>
+            <div class="contact-info">
+                <h2 class="contact-info__header">CONTACTS</h2>
+
+                <ul class="contact-info__list">
+                    <li class="contact-info__item">
+                        <img class="contact-info__logo" class="" src=""
+                            alt="icon">
+                        <a class="contact-info__link" href="tel:+380441111111">
+                            +38 044 111 11 11
+                        </a>
+                    </li>
+                    <li><a href="tel:+380441111111">
+                            +38 044 111 11 11
+                        </a></li>
+                    <li><a href="tel:+380441111111">
+                            +38 044 111 11 11
+                        </a></li>
+                </ul>
+            </div>
+        </section>
+
     </main>
 
 
 
 
-
+    <!-- SCRIPTS -->
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
