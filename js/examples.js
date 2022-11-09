@@ -377,3 +377,20 @@ account.withdraw(300);
 console.log(account.getTransactionDetails(1));
 console.log(account.getTransactionTotal(Transaction.DEPOSIT));
 console.log(account.getTransactionTotal(Transaction.WITHDRAW));
+
+
+// this
+
+// RULE: when called from a method this refers to the object it is inside
+
+const user = {
+    name: "lorem",
+    age: 80,
+    occupation: "teacher",
+
+    getName() {
+        console.log(this);
+    }
+}
+
+console.log(user.getName);
