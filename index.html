@@ -6,7 +6,11 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
     <link rel="stylesheet" href="./sass/main.css" />
-    <link href="/fonts/RubikBurned-Regular.ttf" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+        rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 </head>
@@ -15,15 +19,14 @@
 
     <header class="page-header">
         <section class="logo-socials-left-nav">
-            <svg class="logo">
-                <use href="#logo"></use>
-            </svg>
+            <img src="./images/logo.png" alt="logo" class="logo">
             <div class="socials">
                 <p>Instagram</p>
                 <p>Linkedin</p>
                 <div class="line"></div>
             </div>
         </section>
+
         <section class="hero-container">
             <div class="nav-and-contact-wrapper">
                 <nav class="navbar">
@@ -62,8 +65,12 @@
                 <div>Back</div>
                 <div>Next</div>
             </div>
-            <div class="hamburger-icon">
-                <img src="./images/menu_40px.svg" alt="mobile menu icon" />
+            <div class="mobile-nav-container">
+                <img src="./images/Logo.svg" alt="logo"
+                    class="logo mobile-logo">
+                <div class="hamburger-icon">
+                    <img src="./images/menu_40px.svg" alt="mobile menu icon" />
+                </div>
             </div>
         </section>
 
@@ -88,7 +95,7 @@
         </ul>
     </div>
 
-    <main class="is-hidden">
+    <main>
         <section class="about">
             <div class="content">
                 <div class="images">
@@ -332,10 +339,13 @@
     </main>
 
 
-
-
     <!-- SCRIPTS -->
-    <script src="./js/mobile-menu.js"></script>
+    <!-- <script src="./js/mobile-menu.js"></script>
+
+    <script src="./js/lectures/lecture-01.js"></script> -->
+    <!-- <script src="./js/functions.js"></script> -->
+    <!-- <script src="./js/objects.js"></script> -->
+    <script src="./js/examples.js"></script>
 </body>
 
 </html>

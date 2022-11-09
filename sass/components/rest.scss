@@ -1,0 +1,468 @@
+%primary-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+}
+
+@mixin secondary-header($fontFamily, $color, $margin) {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 49px;
+    letter-spacing: 0.05em;
+    color: $color;
+    margin: $margin;
+
+    @media (max-width: 768px) {
+        font-size: 28px;
+        line-height: 33px;
+        letter-spacing: 0.05em;
+    }
+}
+
+@mixin bordered-bottom($color) {
+    border-bottom: 1px solid $color;
+}
+
+.about {
+    width: 100%;
+    height: 705px;
+    padding: 130px 35px;
+}
+
+.about .content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.content .images {
+    width: 570px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    @media (max-width: 480px) {
+        display: none;
+    }
+
+}
+
+.content .images img {
+    max-width: 270px;
+    height: 100%;
+
+    @media (max-width: 768px) {
+        width: 330px;
+        height: 235px;
+        background-color: red;
+        overflow: hidden;
+    }
+}
+
+.content .images img:first-child {
+    margin-right: 30px;
+
+    @media (max-width: 768px) {
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+}
+
+.content .info {
+    width: calc(100% - 64px - 570px);
+    height: 100%;
+    margin-left: 64px;
+
+    @media (max-width: 768px) {
+        width: calc(100% - 30px - 330px);
+        margin-left: 30px;
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+    }
+}
+
+.info>p:first-child {
+    @extend %primary-text;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--grey-shade-2);
+    margin: 0px 0px 20px 0px;
+}
+
+.info>p:nth-child(2) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    color: #555555;
+    margin: 0px 0px 20px 0px;
+}
+
+
+.info>p:nth-child(3) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+    color: #555555;
+    margin: 0;
+}
+
+.info>h2 {
+    @include secondary-header(raleway, var(--grey-shade-2), 0px 0px 20px 0px);
+}
+
+.info>.contact-us-btn {
+    color: var(--grey-shade-2);
+    margin-top: 40px;
+}
+
+.services-and-prices {
+    width: 100%;
+    min-height: 718px;
+    background-image: url('/images/services-bg.jpg');
+    background-color: #111319;
+    padding: 130px 55px;
+
+}
+
+.services-and-prices p {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(157, 164, 189, 0.6);
+}
+
+.prices-cards {
+    display: flex;
+}
+
+.prices-cards .card {
+    height: 240px;
+    width: 50%;
+}
+
+.prices-cards .card:nth-child(1) {
+    background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.prices-cards .card:nth-child(2) {
+    background: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+
+.services-and-prices .contact-us-btn {
+    color: var(--color-text-secondary);
+    margin: 50px auto;
+}
+
+.prices-cards .card {
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.prices-cards .card .item {
+    width: 100%;
+    height: 30px;
+    /* background: palevioletred; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prices-cards .card .item>p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    color: #9DA4BD;
+    margin: 0;
+}
+
+.prices-cards .card .item>div {
+    width: 210px;
+    height: 18px;
+    @include bordered-bottom(rgba(157, 164, 189, 0.12));
+}
+
+.why-us {
+    width: 100%;
+    height: 582px;
+    padding: 125px 155px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.why-us .reviews {
+    width: 370px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.why-us .reviews .review {
+    font-family: 'Open Sans';
+    width: 170px;
+    height: 133px;
+    background-color: var(--grey-shade-1);
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.why-us .reviews .review:nth-child(2) {
+    margin-top: 35px;
+}
+
+.why-us .reviews .review:nth-child(3) {
+    margin-bottom: 35px;
+}
+
+.why-us .reviews .review:nth-child(4) {
+    margin-top: 30px;
+}
+
+.review .count {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 57px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: var(--grey-shade-2);
+    margin: 0;
+}
+
+.review .count>sup {
+    margin: 0;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 22px;
+    color: #FF6C00;
+}
+
+.review .text {
+    @extend %primary-text;
+    text-align: center;
+    color: var(--grey-shade-2);
+    margin: 0;
+}
+
+.why-us .info {
+    width: 470px;
+    height: 250px;
+    background-color: blanchedalmond;
+}
+
+.barbers {
+    width: 100%;
+    height: 890px;
+    padding: 130px 55px 117px 55px;
+    background-color: var(--grey-shade-1);
+}
+
+.barbers>p:first-child {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #303030;
+    margin: 0px 0px 20px;
+}
+
+.barbers>p:nth-child(2) {
+    font-family: Raleway;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0.05em;
+    color: #303030;
+    margin: 0px 0px 44px;
+}
+
+.bio {
+    width: 100%;
+    height: 515px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bio>.card {
+    width: 370px;
+    height: 100%;
+}
+
+.barber-name {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #303030;
+    margin: 30px 0px 8px;
+}
+
+.barber-type {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FF6C00;
+    margin: 0px 0px 30px;
+}
+
+.barber-socials {
+    margin: 0;
+    padding: 0px 82px 13px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* contact form */
+.contact-form {
+    width: 100%;
+    height: 644px;
+    background-color: #191C26;
+    display: flex;
+    align-items: center;
+
+}
+
+.contact-form h2 {
+    @include secondary-header(raleway, #ffff, 0px 0px 44px 0px);
+}
+
+.contact-form>.book-service {
+    width: 50%;
+    height: 100%;
+    padding-left: 55px;
+    padding-right: 45px;
+    padding-bottom: 63px;
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+.book-service-form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.book-service-form div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.book-service-form input {
+    background-color: #191C26;
+    border: none;
+    @include bordered-bottom(rgba(157, 164, 189, 0.4));
+    width: 255px;
+    height: 24px;
+    padding-bottom: 8px;
+    /* cursor: pointer; */
+}
+
+.book-service-form textarea {
+    background-color: #191C26;
+    border: none;
+    @include bordered-bottom(rgba(157, 164, 189, 0.4));
+    width: 100%;
+    padding-bottom: 8px;
+    resize: none;
+}
+
+.book-service-form input:focus,
+.book-service-form textarea {
+    outline: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.book-service-form input:focus::placeholder {
+    color: white;
+}
+
+.book-service-form>div {
+    margin-bottom: 44px
+}
+
+.book-service-form label {
+    color: rgba(157, 164, 189, 0.4);
+}
+
+.book-service-form label:focus-within {
+    color: white;
+}
+
+
+.book-service-form>.contact-us-btn {
+    display: flex;
+    justify-content: center;
+    color: white;
+    border-width: 2px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.book-service-form>.contact-us-btn:hover {
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+
+
+
+/* BEM */
+
+.contact-info {
+    width: 50%;
+    height: 100%;
+    background: url(/images/contacts-bg.png);
+    padding: 130px 100px;
+
+    &__header {
+        margin: 0px;
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        list-style-type: none;
+    }
+}
