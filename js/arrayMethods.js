@@ -412,14 +412,16 @@
 
 
 const calculator = {
-  numA: [],
+  numA:0,
+  numB:0,
   
   read(a, b) {
-    this.numA.push(a,b)
+    this.numA = a;
+    this.numB = b;
   },
 
   add() {
-    return this.numA[0] + this.numA[1];
+    return this.numA + this.numB;
   }
 
 }

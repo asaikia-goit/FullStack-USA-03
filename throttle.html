@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .cta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        .cta::before,
+        .cta::after {
+            content: "\2193";
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+
+        .event-counter {
+            position: sticky;
+            top: 100px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .box {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 12px;
+            border: 1px solid #03a9f4;
+            border-radius: 4px;
+        }
+
+        .event-counter p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .event-counter span {
+            font-size: 48px;
+            font-family: monospace;
+        }
+
+
+        body {
+            margin: 16px;
+            line-height: 1.5;
+            color: #2a2a2a;
+            background-color: #f5f5f5;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        .blur-up {
+            filter: blur(5px);
+            transition: filter 400ms;
+        }
+
+        .blur-up.lazyloaded {
+            filter: blur(0);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <p class="cta">Scroll me</p>
+
+    <div class="event-counter">
+        <div class="box">
+            <p>Number of scroll events</p>
+            <span class="output">0</span>
+        </div>
+    </div> -->
+
+    <!-- <img class="lazyload blur-up" src="https://via.placeholder.com/960"
+        data-src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=960"
+        alt="Close-Up Photography of Sleeping Tabby Cat" width="960" />
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad fugiat,
+        error
+        quisquam alias eaque officia cum quasi enim libero a molestiae
+        repudiandae
+        repellat deserunt debitis deleniti vel accusantium. Aut enim doloremque
+        ullam quibusdam consequatur in repellendus beatae? Aspernatur sequi
+        fugit
+        vero provident ea perspiciatis eos officia non reiciendis adipisci ipsa,
+        nemo, similique, molestias rerum totam debitis nulla a iure inventore!
+        Eum,
+        voluptatem, sit corrupti at molestiae rerum nulla ratione optio est
+        alias
+        perspiciatis quas. Aliquam libero placeat, distinctio unde deleniti
+        minus
+        commodi at maiores officiis doloremque quae voluptates quia aliquid
+        doloribus, vero aspernatur, aperiam corrupti dicta eligendi rerum? In,
+        voluptate.</p>
+
+    <img class="lazyload blur-up"
+        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+        data-src="https://images.pexels.com/photos/2558605/pexels-photo-2558605.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=960"
+        alt="Photo of Grey Tabby Kitten Lying Down" width="960" />
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad fugiat,
+        error
+        quisquam alias eaque officia cum quasi enim libero a molestiae
+        repudiandae
+        repellat deserunt debitis deleniti vel accusantium. Aut enim doloremque
+        ullam quibusdam consequatur in repellendus beatae? Aspernatur sequi
+        fugit
+        vero provident ea perspiciatis eos officia non reiciendis adipisci ipsa,
+        nemo, similique, molestias rerum totam debitis nulla a iure inventore!
+        Eum,
+        voluptatem, sit corrupti at molestiae rerum nulla ratione optio est
+        alias
+        perspiciatis quas. Aliquam libero placeat, distinctio unde deleniti
+        minus
+        commodi at maiores officiis doloremque quae voluptates quia aliquid
+        doloribus, vero aspernatur, aperiam corrupti dicta eligendi rerum? In,
+        voluptate.</p>
+
+    <img class="lazyload blur-up" src="https://via.placeholder.com/960"
+        data-src="https://images.pexels.com/photos/1440403/pexels-photo-1440403.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=960"
+        alt="Orange Kitten" width="960" />
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad fugiat,
+        error
+        quisquam alias eaque officia cum quasi enim libero a molestiae
+        repudiandae
+        repellat deserunt debitis deleniti vel accusantium. Aut enim doloremque
+        ullam quibusdam consequatur in repellendus beatae? Aspernatur sequi
+        fugit
+        vero provident ea perspiciatis eos officia non reiciendis adipisci ipsa,
+        nemo, similique, molestias rerum totam debitis nulla a iure inventore!
+        Eum,
+        voluptatem, sit corrupti at molestiae rerum nulla ratione optio est
+        alias
+        perspiciatis quas. Aliquam libero placeat, distinctio unde deleniti
+        minus
+        commodi at maiores officiis doloremque quae voluptates quia aliquid
+        doloribus, vero aspernatur, aperiam corrupti dicta eligendi rerum? In,
+        voluptate.</p>
+
+    <img class="lazyload blur-up" src="https://via.placeholder.com/960"
+        data-src="https://images.pexels.com/photos/2817421/pexels-photo-2817421.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=960"
+        alt="Photo of Tabby Cat Sleeping On Chair" width="960" />
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad fugiat,
+        error
+        quisquam alias eaque officia cum quasi enim libero a molestiae
+        repudiandae
+        repellat deserunt debitis deleniti vel accusantium. Aut enim doloremque
+        ullam quibusdam consequatur in repellendus beatae? Aspernatur sequi
+        fugit
+        vero provident ea perspiciatis eos officia non reiciendis adipisci ipsa,
+        nemo, similique, molestias rerum totam debitis nulla a iure inventore!
+        Eum,
+        voluptatem, sit corrupti at molestiae rerum nulla ratione optio est
+        alias
+        perspiciatis quas. Aliquam libero placeat, distinctio unde deleniti
+        minus
+        commodi at maiores officiis doloremque quae voluptates quia aliquid
+        doloribus, vero aspernatur, aperiam corrupti dicta eligendi rerum? In,
+        voluptate.</p>
+
+    <img class="lazyload blur-up" src="https://via.placeholder.com/960"
+        data-src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=960"
+        alt="Brown Cat With Green Eyes" width="960" />
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad fugiat,
+        error
+        quisquam alias eaque officia cum quasi enim libero a molestiae
+        repudiandae
+        repellat deserunt debitis deleniti vel accusantium. Aut enim doloremque
+        ullam quibusdam consequatur in repellendus beatae? Aspernatur sequi
+        fugit
+        vero provident ea perspiciatis eos officia non reiciendis adipisci ipsa,
+        nemo, similique, molestias rerum totam debitis nulla a iure inventore!
+        Eum,
+        voluptatem, sit corrupti at molestiae rerum nulla ratione optio est
+        alias
+        perspiciatis quas. Aliquam libero placeat, distinctio unde deleniti
+        minus
+        commodi at maiores officiis doloremque quae voluptates quia aliquid
+        doloribus, vero aspernatur, aperiam corrupti dicta eligendi rerum? In,
+        voluptate.</p>
+
+    <img class="lazyload blur-up" src="https://via.placeholder.com/960"
+        data-src="https://images.pexels.com/photos/3635550/pexels-photo-3635550.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=960"
+        alt="Close-up Photo of Grey and Brown Cat" width="960" />
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad fugiat,
+        error
+        quisquam alias eaque officia cum quasi enim libero a molestiae
+        repudiandae
+        repellat deserunt debitis deleniti vel accusantium. Aut enim doloremque
+        ullam quibusdam consequatur in repellendus beatae? Aspernatur sequi
+        fugit
+        vero provident ea perspiciatis eos officia non reiciendis adipisci ipsa,
+        nemo, similique, molestias rerum totam debitis nulla a iure inventore!
+        Eum,
+        voluptatem, sit corrupti at molestiae rerum nulla ratione optio est
+        alias
+        perspiciatis quas. Aliquam libero placeat, distinctio unde deleniti
+        minus
+        commodi at maiores officiis doloremque quae voluptates quia aliquid
+        doloribus, vero aspernatur, aperiam corrupti dicta eligendi rerum? In,
+        voluptate.</p>
+
+    <img class="lazyload blur-up" src="https://via.placeholder.com/960"
+        data-src="https://images.pexels.com/photos/57416/cat-sweet-kitty-animals-57416.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=960"
+        alt="Close-Up Photo of Yellow and White Cat" width="960" />
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad fugiat,
+        error
+        quisquam alias eaque officia cum quasi enim libero a molestiae
+        repudiandae
+        repellat deserunt debitis deleniti vel accusantium. Aut enim doloremque
+        ullam quibusdam consequatur in repellendus beatae? Aspernatur sequi
+        fugit
+        vero provident ea perspiciatis eos officia non reiciendis adipisci ipsa,
+        nemo, similique, molestias rerum totam debitis nulla a iure inventore!
+        Eum,
+        voluptatem, sit corrupti at molestiae rerum nulla ratione optio est
+        alias
+        perspiciatis quas. Aliquam libero placeat, distinctio unde deleniti
+        minus
+        commodi at maiores officiis doloremque quae voluptates quia aliquid
+        doloribus, vero aspernatur, aperiam corrupti dicta eligendi rerum? In,
+        voluptate.</p> -->
+
+
+    <div id="controls">
+        <input type="number" min="1" max="100" step="1" />
+        <button type="button" data-create>Create</button>
+        <button type="button" data-destroy>Destroy</button>
+    </div>
+
+    <div id="boxes">
+    </div>
+
+
+    <!-- SCRIPTS -->
+    <!-- Lodash library script file -->
+    <script async
+        src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+        integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Lazysizes library script file -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+        integrity="sha512-q583ppKrCRc7N5O0n2nzUiJ+suUv7Et1JGels4bXOaMFQcamPk9HjdUknZuuFjBNs7tsMuadge5k9RzdmO+1GQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script defer src="./js/throttle.js"></script>
+</body>
+
+</html>
