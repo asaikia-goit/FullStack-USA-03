@@ -1,0 +1,26 @@
+{
+  "name": "fullstack-usa-03",
+  "version": "1.0.0",
+  "description": "My first package.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asaikia-goit/FullStack-USA-03.git"
+  },
+  "keywords": [
+    "test",
+    "goit-"
+  ],
+  "author": "lorem ipsum",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asaikia-goit/FullStack-USA-03/issues"
+  },
+  "homepage": "https://github.com/asaikia-goit/FullStack-USA-03#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
