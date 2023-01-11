@@ -1,4 +1,2 @@
-
-const a = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, illo!"
-
-console.log(`Using Node!, ${a}`);
+var i = 'Hello \n World'
+console.log(i)
